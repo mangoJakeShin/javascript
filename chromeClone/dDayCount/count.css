@@ -1,0 +1,44 @@
+body{
+    background-color: #1b3f39;
+    position: absolute;
+    top:  40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+h1{
+    text-align: center;
+    color: #d3ebe0;
+}
+.christmas{
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(
+                    45deg,
+                    #b1cbbb 20%, 
+                    #eea29a 40%, 
+                    #c94c4c 60%, 
+                    #8d1414 80%,
+                    #8B9862
+                    );
+    background-size:100px 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    animation: slide 10s infinite linear forwards;
+    -webkit-animation: slide 10s infinite linear forwards;}
+    @keyframes slide {
+        0%{
+            background-position:0%;
+        }
+        100% {
+            background-position:100%;
+        }
+    }
+    @-webkit-keyframes slide {
+        0%{
+            background-position:0%;
+        }
+        100% {
+            background-position:100%;
+        }
+    }

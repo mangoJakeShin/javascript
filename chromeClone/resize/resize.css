@@ -1,0 +1,17 @@
+body{
+    background-color: #18dcff;
+}
+.overSized{
+    background-color: #c56cf0;
+}
+.midSized{
+    background-color: #32ff7e;
+}
+
+h1{
+    color: #ffaf40;
+    transition: color 0.5s ease-in-out;
+}
+.btn{
+    cursor: pointer
+}

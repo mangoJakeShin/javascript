@@ -1,0 +1,14 @@
+body{
+    background-color: blanchedalmond;
+}
+
+h1{
+    color: purple;
+}
+.form, .greetings{
+    display: none;
+}
+
+.showing{
+    display: block;
+}
