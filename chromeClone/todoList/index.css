@@ -1,0 +1,10 @@
+.btn {
+    cursor: pointer;
+  }
+  body {
+    color: #34495e;
+  }
+  
+.showing{
+    display: block;
+}
