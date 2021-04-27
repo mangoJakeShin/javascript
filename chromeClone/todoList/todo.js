@@ -27,26 +27,26 @@ const toDoForm = document.querySelector(".js-toDoForm"),
       
 }
   
-  function deleteFin(event) {
-      const btn = event.target;
-    const li = btn.parentNode;
-    finishedList.removeChild(li);
-    const cleanToDos = toFins.filter(function(toFins) {
-      return toFins.id !== parseInt(li.id);
-    });
-    toFins = cleanToDos;
-    saveFins();
+function deleteFin(event) {
+    const btn = event.target;
+  const li = btn.parentNode;
+  finishedList.removeChild(li);
+  const cleanToDos = toFins.filter(function(toFins) {
+    return toFins.id !== parseInt(li.id);
+  });
+  toFins = cleanToDos;
+  saveFins();
 }
 
 function moveToFins(event) {
-    let text = event.target.parentNode.querySelector("span")
-    eventname = text.innerText
-    paintFins(eventname)
-    deleteToDo(event)
+  let text = event.target.parentNode.querySelector("span")
+  let eventname = text.innerText
+  paintFins(eventname)
+  deleteToDo(event)
 }
 function moveToDos(event) {
   let text = event.target.parentNode.querySelector("span")
-  eventname = text.innerText
+  let eventname = text.innerText
   paintToDo(eventname)
   deleteFin(event)
 }
@@ -103,9 +103,13 @@ function paintFins(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
+  if (currentValue.length !== 0) {
+    
   paintToDo(currentValue);
   toDoInput.value = "";
-}
+
+  }
+  }
 
 function loadToDos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
